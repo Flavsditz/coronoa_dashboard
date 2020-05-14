@@ -1,3 +1,4 @@
+import 'package:coronadashboard/simple_api/simple_api_service.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatefulWidget {
@@ -11,17 +12,18 @@ class LandingPage extends StatefulWidget {
 
 class _LandingPageState extends State<LandingPage> {
   int _infections = 0;
+  SimpleAPIService _apiService = SimpleAPIService();
 
-  void _getGlobalInfectionsNumber() async {
-    //TODO: Make your HTTP request here
-    // 1) use this URL: https://api.thevirustracker.com/free-api?global=stats
-    //    check what you get and how to extract it correctly
-    // 2) play around with the other enpoints if you want
+  void _getGlobalStats() async {
+    _apiService.getGlobalStatistics().then((stat) => {});
+  }
 
-    //Remember to set the state of the app once you have a value
-    setState(() {
+  void _getAllCountriesStats() async {
+    _apiService.getAllCountriesStatistics().then((statsList) => {});
+  }
 
-    });
+  void _getCountryStats() async {
+    _apiService.getCountryStatistics("DE").then((stat) => {});
   }
 
   @override
@@ -34,11 +36,11 @@ class _LandingPageState extends State<LandingPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            if(_infections == 0)
+            if (_infections == 0)
               Text(
                 'You don\'t have any data yet, click on the reload button to get it',
               ),
-            if(_infections != 0)
+            if (_infections != 0)
               Text(
                 'Globally, the number of infections at the moment is:',
               ),
@@ -50,7 +52,7 @@ class _LandingPageState extends State<LandingPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _getGlobalInfectionsNumber,
+        onPressed: () {},
         tooltip: 'Reload Data',
         child: Icon(Icons.autorenew),
       ),
