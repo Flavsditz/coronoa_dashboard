@@ -8,7 +8,7 @@ A new Flutter application skeleton for the Frankfurt Flutteres Meetup
 * Icons from FontAwesome (maybe these are contained in the FontAwesome Flutter Library - Check Below) - https://fontawesome.com/icons?d=gallery&q=covid-19&m=free
 * Icons from FlatIcon - https://www.flaticon.com/free-icons/covid-19
 * Icons from IconFinder - https://www.iconfinder.com/p/coronavirus-awareness-icons
-* Animated Icons Available in Dribbble - https://dribbble.com/shots/10809711-Coronavirus-Icons (ANIMATED)
+* Animated Icons Available in Dribbble - https://dribbble.com/shots/10809711-Coronavirus-Icons
 
 ### INSPIRATION
 Some dashboards, mobile apps, web-apps and others on the CoVid, which you can use to inspire you on your app. Be it the color schema, some elements or what info and how to show them. 
